@@ -50,9 +50,8 @@ sudo usermod -aG docker $USER
 
 ### Docker 镜像拉取失败？
 
-1. 确认会员是否在有效期内
-2. 尝试重新 `docker login rde.lidj.cn`
-3. 检查网络连接
+1. 检查网络连接
+2. 尝试使用镜像加速（参考 [国际化与镜像加速](/zh/docs/guide/i18n)）
 
 ### 如何查看会员到期时间？
 

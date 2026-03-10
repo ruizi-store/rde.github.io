@@ -6,7 +6,6 @@ layout: page
 import { onMounted } from 'vue'
 
 onMounted(() => {
-  // GitHub Pages: default to English
   const lang = navigator.language || navigator.userLanguage || ''
   if (lang.startsWith('zh')) {
     window.location.replace('/zh/')

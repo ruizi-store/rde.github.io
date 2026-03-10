@@ -10,7 +10,6 @@ export const enConfig: LocaleSpecificConfig<DefaultTheme.Config> & { label: stri
     nav: [
       { text: 'Home', link: '/en/' },
       { text: 'Docs', link: '/en/docs/guide/what-is-rde' },
-      { text: 'Forum', link: 'https://bbs.lidj.cn' },
     ],
 
     sidebar: {

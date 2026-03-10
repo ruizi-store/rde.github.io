@@ -78,7 +78,7 @@ onMounted(() => {
       <div class="label">Ubuntu / Debian 快速安装（国内加速）</div>
       <div class="command">
         <span class="prompt">$</span>
-        <code>wget https://rde.lidj.cn/releases/rde_latest_amd64.deb && sudo apt install -y ./rde_latest_amd64.deb</code>
+        <code>wget https://github.com/ruizi-store/rde/releases/latest/download/rde_latest_amd64.deb && sudo apt install -y ./rde_latest_amd64.deb</code>
       </div>
     </div>
     <div id="tab-nas" class="install-tab-content">

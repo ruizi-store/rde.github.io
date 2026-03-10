@@ -69,7 +69,7 @@ The ISO image includes these extras compared to curl deployment:
 
 ISO-installed RDE can be updated via deb package:
 
-    wget https://rde.lidj.cn/releases/rde_latest_amd64.deb && sudo apt install -y ./rde_latest_amd64.deb
+    wget https://github.com/ruizi-store/rde/releases/latest/download/rde_latest_amd64.deb && sudo apt install -y ./rde_latest_amd64.deb
 
 ### Can I try it in a virtual machine?
 

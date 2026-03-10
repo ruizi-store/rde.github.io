@@ -76,7 +76,7 @@ ISO 镜像相比 curl 部署版本，额外预装了：
 ISO 安装的 RDE 可以通过 deb 包更新：
 
 ```bash
-wget https://rde.lidj.cn/releases/rde_latest_amd64.deb && sudo apt install -y ./rde_latest_amd64.deb
+wget https://github.com/ruizi-store/rde/releases/latest/download/rde_latest_amd64.deb && sudo apt install -y ./rde_latest_amd64.deb
 ```
 
 ### 能否在虚拟机中体验？

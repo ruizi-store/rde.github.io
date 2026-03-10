@@ -46,9 +46,8 @@ Edit `/etc/rde/conf.conf` to modify the `port` option, then restart the service.
 
 ### Docker image pull fails?
 
-1. Verify membership is active
-2. Try `docker login rde.lidj.cn` again
-3. Check network connection
+1. Check network connection
+2. Try using mirror acceleration (see [i18n & Mirror Acceleration](/en/docs/guide/i18n))
 
 ### How to check membership expiry?
 

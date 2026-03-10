@@ -10,7 +10,6 @@ export const zhConfig: LocaleSpecificConfig<DefaultTheme.Config> & { label: stri
     nav: [
       { text: '首页', link: '/zh/' },
       { text: '文档', link: '/zh/docs/guide/what-is-rde' },
-      { text: '论坛', link: 'https://bbs.lidj.cn' },
     ],
 
     sidebar: {
