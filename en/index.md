@@ -74,10 +74,10 @@ onMounted(() => {
       <button class="install-tab" onclick="switchTab('nas')">💿 NAS Image</button>
     </div>
     <div id="tab-server" class="install-tab-content active">
-      <div class="label">Install via GitHub Releases (auto-fetch latest)</div>
+      <div class="label">One-click install (auto-detects China network for acceleration)</div>
       <div class="command">
         <span class="prompt">$</span>
-        <code>curl -s https://api.github.com/repos/ruizi-store/rde/releases/latest | grep -o 'https://.*\.deb' | xargs wget -q && sudo apt install -y ./rde_*.deb</code>
+        <code>curl -fsSL https://desktop.ruizi.store/install.sh | bash</code>
       </div>
       <div style="margin-top: 0.6rem; text-align: right;">
         <a href="https://github.com/ruizi-store/rde/releases" target="_blank" style="color: #a5b4fc; font-size: 0.8rem; text-decoration: none;">All releases →</a>

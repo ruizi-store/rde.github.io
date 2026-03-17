@@ -74,10 +74,10 @@ onMounted(() => {
       <button class="install-tab" onclick="switchTab('nas')">💿 NAS 镜像</button>
     </div>
     <div id="tab-server" class="install-tab-content active">
-      <div class="label">通过 GitHub Releases 安装（自动获取最新版）</div>
+      <div class="label">一键安装（自动检测网络环境，国内自动加速）</div>
       <div class="command">
         <span class="prompt">$</span>
-        <code>curl -s https://api.github.com/repos/ruizi-store/rde/releases/latest | grep -o 'https://.*\.deb' | xargs wget -q && sudo apt install -y ./rde_*.deb</code>
+        <code>curl -fsSL https://desktop.ruizi.store/install.sh | bash</code>
       </div>
       <div style="margin-top: 0.6rem; text-align: right;">
         <a href="https://github.com/ruizi-store/rde/releases" target="_blank" style="color: #a5b4fc; font-size: 0.8rem; text-decoration: none;">所有版本 →</a>
