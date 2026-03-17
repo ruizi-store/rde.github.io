@@ -60,7 +60,7 @@ export const enConfig: LocaleSpecificConfig<DefaultTheme.Config> & { label: stri
     },
 
     footer: {
-      message: 'Released under the GPL-3.0 License. | <a href="/en/docs/guide/what-is-rde">Docs</a> · <a href="https://github.com/ruizi-store/rde" target="_blank">GitHub</a><br><span style="display:inline-block;margin-top:8px;">QQ Group: <img src="/qq-group-qrcode.jpg" alt="QQ Group QR Code" style="width:120px;height:120px;vertical-align:middle;border-radius:8px;margin-left:8px;"></span>',
+      message: 'Released under the GPL-3.0 License. | <a href="/en/docs/guide/what-is-rde">Docs</a> · <a href="https://github.com/ruizi-store/rde" target="_blank">GitHub</a><br><span style="display:inline-block;margin-top:12px;">QQ Group: <img src="/qq-group-qrcode.jpg" alt="QQ Group QR Code" style="width:180px;height:180px;vertical-align:middle;border-radius:8px;margin-left:8px;"></span>',
       copyright: 'Copyright © 2024-present RDE Team',
     },
 
