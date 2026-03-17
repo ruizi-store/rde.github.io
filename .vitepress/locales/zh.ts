@@ -60,7 +60,7 @@ export const zhConfig: LocaleSpecificConfig<DefaultTheme.Config> & { label: stri
     },
 
     footer: {
-      message: 'Released under the GPL-3.0 License. | <a href="/zh/docs/guide/what-is-rde">文档</a> · <a href="https://bbs.lidj.cn" target="_blank">论坛</a> · <a href="https://github.com/ruizi-store/rde" target="_blank">GitHub</a>',
+      message: 'Released under the GPL-3.0 License. | <a href="/zh/docs/guide/what-is-rde">文档</a> · <a href="/qq-group-qrcode.jpg" target="_blank">QQ 群</a> · <a href="https://github.com/ruizi-store/rde" target="_blank">GitHub</a>',
       copyright: 'Copyright © 2024-present RDE Team',
     },
 

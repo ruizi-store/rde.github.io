@@ -75,10 +75,13 @@ onMounted(() => {
       <button class="install-tab" onclick="switchTab('global')">🌐 Global</button>
     </div>
     <div id="tab-server" class="install-tab-content active">
-      <div class="label">Ubuntu / Debian Quick Install (China accelerated)</div>
+      <div class="label">Install via GitHub Releases (auto-fetch latest)</div>
       <div class="command">
         <span class="prompt">$</span>
-        <code>wget https://github.com/ruizi-store/rde/releases/latest/download/rde_latest_amd64.deb && sudo apt install -y ./rde_latest_amd64.deb</code>
+        <code>curl -s https://api.github.com/repos/ruizi-store/rde/releases/latest | grep -o 'https://.*\.deb' | xargs wget -q && sudo apt install -y ./rde_*.deb</code>
+      </div>
+      <div style="margin-top: 0.6rem; text-align: right;">
+        <a href="https://github.com/ruizi-store/rde/releases" target="_blank" style="color: #a5b4fc; font-size: 0.8rem; text-decoration: none;">All releases →</a>
       </div>
     </div>
     <div id="tab-nas" class="install-tab-content">
