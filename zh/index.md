@@ -46,9 +46,9 @@ hero:
 import { onMounted } from 'vue'
 
 onMounted(() => {
-  // 演示账号 badge 插入到按钮行
+  // 演示账号 badge 插入到按钮行（防止重复）
   const actions = document.querySelector('.VPHero .actions')
-  if (actions) {
+  if (actions && !actions.querySelector('.demo-badge')) {
     const badge = document.createElement('div')
     badge.className = 'demo-badge'
     badge.innerHTML = '演示账号：<code>demo</code> / <code>demo1234</code>'
@@ -72,7 +72,6 @@ onMounted(() => {
     <div class="install-tabs">
       <button class="install-tab active" onclick="switchTab('server')">🖥️ 云服务器</button>
       <button class="install-tab" onclick="switchTab('nas')">💿 NAS 镜像</button>
-      <button class="install-tab" onclick="switchTab('global')">🌐 Global</button>
     </div>
     <div id="tab-server" class="install-tab-content active">
       <div class="label">通过 GitHub Releases 安装（自动获取最新版）</div>
@@ -95,16 +94,6 @@ onMounted(() => {
         <a href="https://pan.baidu.com/s/1VcEEPIlWV8IuvXQRj9xUCA?pwd=rde1" target="_blank" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1.2rem; background: linear-gradient(135deg, #4F46E5, #7C3AED); color: white; border-radius: 8px; text-decoration: none; font-size: 0.85rem; font-weight: 600; white-space: nowrap;">📥 百度网盘下载</a>
       </div>
       <div style="margin-top: 0.5rem; color: #a5b4fc; font-size: 0.78rem;">提取码：<code style="background: rgba(255,255,255,0.1); padding: 0.1rem 0.4rem; border-radius: 4px; color: #e0e7ff;">rde1</code></div>
-    </div>
-    <div id="tab-global" class="install-tab-content">
-      <div class="label">Install via GitHub Releases (auto-fetch latest)</div>
-      <div class="command">
-        <span class="prompt">$</span>
-        <code>curl -s https://api.github.com/repos/ruizi-store/rde/releases/latest | grep -o 'https://.*\.deb' | xargs wget -q && sudo apt install -y ./rde_*.deb</code>
-      </div>
-      <div style="margin-top: 0.6rem; text-align: right;">
-        <a href="https://github.com/ruizi-store/rde/releases" target="_blank" style="color: #a5b4fc; font-size: 0.8rem; text-decoration: none;">All releases →</a>
-      </div>
     </div>
   </div>
 </div>

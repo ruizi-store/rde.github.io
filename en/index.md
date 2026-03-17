@@ -46,9 +46,9 @@ hero:
 import { onMounted } from 'vue'
 
 onMounted(() => {
-  // Insert demo account badge into the actions row
+  // Insert demo account badge into the actions row (prevent duplicates)
   const actions = document.querySelector('.VPHero .actions')
-  if (actions) {
+  if (actions && !actions.querySelector('.demo-badge')) {
     const badge = document.createElement('div')
     badge.className = 'demo-badge'
     badge.innerHTML = 'Demo: <code>demo</code> / <code>demo1234</code>'
@@ -72,7 +72,6 @@ onMounted(() => {
     <div class="install-tabs">
       <button class="install-tab active" onclick="switchTab('server')">🖥️ Cloud Server</button>
       <button class="install-tab" onclick="switchTab('nas')">💿 NAS Image</button>
-      <button class="install-tab" onclick="switchTab('global')">🌐 Global</button>
     </div>
     <div id="tab-server" class="install-tab-content active">
       <div class="label">Install via GitHub Releases (auto-fetch latest)</div>
@@ -93,16 +92,6 @@ onMounted(() => {
           <div style="color: #a5b4fc; font-size: 0.8rem; margin-top: 0.2rem;">Based on Debian 13, pre-installed with RDE Desktop + all dependencies</div>
         </div>
         <a href="https://github.com/ruizi-store/rde/releases" target="_blank" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1.2rem; background: linear-gradient(135deg, #4F46E5, #7C3AED); color: white; border-radius: 8px; text-decoration: none; font-size: 0.85rem; font-weight: 600; white-space: nowrap;">📥 Download from GitHub</a>
-      </div>
-    </div>
-    <div id="tab-global" class="install-tab-content">
-      <div class="label">Install via GitHub Releases (auto-fetch latest)</div>
-      <div class="command">
-        <span class="prompt">$</span>
-        <code>curl -s https://api.github.com/repos/ruizi-store/rde/releases/latest | grep -o 'https://.*\.deb' | xargs wget -q && sudo apt install -y ./rde_*.deb</code>
-      </div>
-      <div style="margin-top: 0.6rem; text-align: right;">
-        <a href="https://github.com/ruizi-store/rde/releases" target="_blank" style="color: #a5b4fc; font-size: 0.8rem; text-decoration: none;">All releases →</a>
       </div>
     </div>
   </div>
