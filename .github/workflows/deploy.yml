@@ -34,7 +34,7 @@ jobs:
       - name: Build VitePress
         run: npm run build
 
-      - name: Override root redirect to English
+      - name: Override root redirect (default Chinese, detect English)
         run: |
           cat > .vitepress/dist/index.html << 'EOF'
           <!DOCTYPE html>
@@ -42,11 +42,19 @@ jobs:
           <head>
             <meta charset="utf-8">
             <title>RDE - Cloud Linux Desktop</title>
-            <meta http-equiv="refresh" content="0;url=/en/">
-            <link rel="canonical" href="/en/">
+            <meta http-equiv="refresh" content="0;url=/zh/">
+            <link rel="canonical" href="/zh/">
+            <script>
+              (function() {
+                var lang = navigator.language || navigator.userLanguage || '';
+                if (lang.startsWith('en')) {
+                  window.location.replace('/en/');
+                }
+              })();
+            </script>
           </head>
           <body>
-            <p>Redirecting to <a href="/en/">English version</a>...</p>
+            <p>Redirecting...</p>
           </body>
           </html>
           EOF
