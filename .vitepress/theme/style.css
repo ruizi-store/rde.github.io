@@ -656,3 +656,17 @@
     font-size: 0.75rem !important;
   }
 }
+
+/* ── 语言切换菜单顺序固定 ─────────────────────────── */
+.VPMenu .items {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.VPMenu .items .VPMenuLink:has([href*="/zh/"]) {
+  order: 1 !important;
+}
+
+.VPMenu .items .VPMenuLink:has([href*="/en/"]) {
+  order: 2 !important;
+}
