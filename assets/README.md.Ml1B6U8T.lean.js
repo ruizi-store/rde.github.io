@@ -1,0 +1,1 @@
+import{_ as a,o as i,c as n,ag as e}from"./chunks/framework.DEqXEGcv.js";const o=JSON.parse('{"title":"RDE 官网","description":"","frontmatter":{},"headers":[],"relativePath":"README.md","filePath":"README.md"}'),p={name:"README.md"};function l(t,s,h,k,r,d){return i(),n("div",null,[...s[0]||(s[0]=[e("",11)])])}const g=a(p,[["render",l]]);export{o as __pageData,g as default};
